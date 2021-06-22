@@ -1,7 +1,56 @@
-<main class="Video">
-    <article>
-        <div>
-            <iframe src="https://www.youtube.com/embed/f7YMgfjUfGk" allowfullscreen></iframe>
-        </div>
-    </article>
-</main>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	
+
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+        <link rel="shortcut icon" type="image/x-icon" href="imagenes/Drone.ico">
+        <link href="estilos/estilos_generales.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="estilos/responsive.css" type="text/css">
+        <link href="estilos/estilos.css" rel="stylesheet" type="text/css">
+        <title>MR Steele</title>
+    </head>
+    <body>
+        <nav class="Navegacion Navegacion-Tamaño menu">
+            <img src="imagenes/Hamburguesa.ico" alt="">
+            <li class="Visible"><a href="index.html">Inicio</a></li>
+
+            <ul class="Navegacion-Celular ">
+                <li class="ColorButton"><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="m_drones.html">Mejores Drones</a></li>
+                <li><a href="contacto.html">Contactos</a></li>
+            <ul>
+        </nav>
+        <hr>
+        <header>
+            <h1>Steele Davis te da la bienvenida!!</h1>
+            <hr>
+        </header>
+        <main>
+ 
+        </main>
+        <footer class="fila">
+            <hr>
+            <p>
+                Copyright – MR Steele –2021
+            </p>
+        </footer>
+        <script src="jquery-3.6.0.min.js" type="text/javascript"></script>
+        <script>
+            $('.menu').on('click');
+            $('a').on('click', function(evento){
+                evento.preventDefault();
+                var $link = $(evento.target);
+                var url = $link.prop('href');
+                $.get(url, function(contenido){
+                    $('main').html(contenido);
+                    menu()
+                })
+            })
+            $('main').load('inicio.html')
+        </script>
+    </body>
+</html>
