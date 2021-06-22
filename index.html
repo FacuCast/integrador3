@@ -18,7 +18,7 @@
             <li class="Visible"><a href="index.html">Inicio</a></li>
 
             <ul class="Navegacion-Celular ">
-                <li class="ColorButton"><a href="index.html">Inicio</a></li>
+                <li class="ColorButton"><a href="inicio.html">Inicio</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
                 <li><a href="m_drones.html">Mejores Drones</a></li>
                 <li><a href="contacto.html">Contactos</a></li>
@@ -47,10 +47,10 @@
                 var url = $link.prop('href');
                 $.get(url, function(contenido){
                     $('main').html(contenido);
-                    menu()
-                })
-            })
-            $('main').load('inicio.html')
+                    menu();
+                });
+            });
+            $('main').load('noticias.html')
         </script>
     </body>
 </html>
